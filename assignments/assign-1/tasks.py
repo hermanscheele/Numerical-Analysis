@@ -9,7 +9,7 @@ for m in ms:
     data = [y, y2]
     for yi in data:
 
-        
+
         A = Vandermonde(x, m)
         b = yi
 
@@ -40,8 +40,11 @@ for m in ms:
         xplot = np.linspace(x.min(), x.max(), 100)
         Aplot = Vandermonde(xplot, m)
         yfit = Aplot @ coeff
-        plt.plot(x, yi, 'o')
-        plt.plot(xplot, yfit)
+        plt.plot(x, yi, 'o', label="data")
+        plt.plot(xplot, yfit, label=f"ŷ(x) (m = {m})")
+        plt.xlabel("x-values")
+        plt.ylabel("ŷ(x)")
+        plt.legend()
         plt.show()
 
         # Plot of fitted pol. by Normal eqs.
