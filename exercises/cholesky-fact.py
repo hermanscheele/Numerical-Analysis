@@ -9,7 +9,7 @@ A = np.array([
     [0,0,0,0,1,4],
 ])
 
-def cholesky_factorization(A):
+def cholesky_fact(A):
 
     Ai = A
     n = len(Ai)
@@ -29,7 +29,7 @@ def cholesky_factorization(A):
 
     return L, D
 
-L, D = cholesky_factorization(A)
+L, D = cholesky_fact(A)
 
 print(np.allclose(A, L @ D @ L.T))
 
