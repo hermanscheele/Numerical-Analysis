@@ -30,3 +30,4 @@ def Vandermonde(x, m):
         A[:, i] = ai
 
     return A
+
