@@ -10,6 +10,8 @@ for m in ms:
     for yi in data:
 
 
+        # ------------ Task 1 ------------ #
+
         A = Vandermonde(x, m)
         b = yi
 

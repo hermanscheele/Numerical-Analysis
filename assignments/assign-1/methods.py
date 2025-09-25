@@ -1,5 +1,6 @@
 import numpy as np
 
+# Back-substitution 
 def back_sub_solver(A, b):
     n = len(A)
     x = np.zeros(n)
@@ -14,11 +15,11 @@ def back_sub_solver(A, b):
 
     return x
 
-
+# QR-Factorization
 def QR(A):
     return np.linalg.qr(A)
 
-
+# Generation of the Vandermonde matrix
 def Vandermonde(x, m):
 
     n = len(x)
@@ -31,7 +32,7 @@ def Vandermonde(x, m):
 
     return A
 
-
+# Forward-substitution
 def forward_sub_solver(A, b):
     n = len(A)
     x = np.zeros(n)
@@ -47,7 +48,7 @@ def forward_sub_solver(A, b):
 
     return x
 
-
+# Cholesky-factorization 
 def cholesky_fact(A):
 
     Ai = A
