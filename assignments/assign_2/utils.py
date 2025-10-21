@@ -2,6 +2,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 
+# Compute the SVD(A) = U S V_T
 def svd(a, full=False):
     n = a.shape[0]
     m = a.shape[1]
@@ -33,7 +34,7 @@ def svd(a, full=False):
     return u, s, v.T
 
 
-
+# Plot the log10 of the singular values a image list
 def plot_log_singular_vals(ims):
 
     for name, im in ims:
@@ -49,5 +50,24 @@ def plot_log_singular_vals(ims):
     plt.legend()
     plt.show()
     
-    
 
+# Plot the compressed image with r
+def plot_compressed(im, r):
+    
+    U, S, V_T = svd(im)
+    sigmas = np.diag(S)[:r]
+
+    u = U[:, :r]
+    s = np.diag(sigmas)
+    v = V_T.T[:, :r]
+
+    im_c = u @ s @ v.T
+    
+    plt.figure()
+    plt.axis(False)
+    plt.imshow(im_c, cmap='gray')
+    plt.show()
+
+
+
+# Construct information extractor
