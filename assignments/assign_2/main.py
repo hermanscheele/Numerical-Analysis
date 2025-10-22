@@ -20,9 +20,11 @@ im2 = img_as_float(im2_grey)
 im3 = img_as_float(im3_grey)
 ims = [('Chessboard', im1), ('Jellyfish', im2), ('City', im3)]
 
-r = 20
+r = 50
 
-plot_compressed(im3, r)
 plot_log_singular_vals(ims)
 
-
+plot_compressed(im1, 1)
+plot_compressed(im1, 2)
+plot_compressed(im2, r)
+plot_compressed(im3, r)

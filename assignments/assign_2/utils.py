@@ -1,9 +1,8 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
-
 # Compute the SVD(A) = U S V_T
-def svd(a, full=False):
+def svd(a):
     n = a.shape[0]
     m = a.shape[1]
 
@@ -64,10 +63,9 @@ def plot_compressed(im, r):
     im_c = u @ s @ v.T
     
     plt.figure()
+    plt.title(f'r = {r}')
     plt.axis(False)
     plt.imshow(im_c, cmap='gray')
     plt.show()
 
 
-
-# Construct information extractor
