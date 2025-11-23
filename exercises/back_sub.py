@@ -28,6 +28,7 @@ b = [2, 4, 8]
 x = np.linalg.solve(A, b)
 xback = backsolve(A, b)
 
+print("")
 print(x)
 print(xback)
 print(np.all(x == xback))
