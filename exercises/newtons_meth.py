@@ -18,8 +18,8 @@ def newtons_meth(a, n):
     return x_k
 
 
-a = 81
-n = 10
+a = 3
+n = 2
 
 newtons_meth(a, n)
 
